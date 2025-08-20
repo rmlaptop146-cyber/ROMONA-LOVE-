@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rohan ❤ Monalisha</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+      height: 100vh;
+      background: linear-gradient(-45deg, #fbc2eb, #a6c1ee, #f665c1, #0dcaf0);
+      background-size: 400% 400%;
+      animation: gradientMove 12s ease infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      color: #fff;
+    }
+    @keyframes gradientMove {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      text-shadow: 3px 3px 12px rgba(0,0,0,0.4);
+      animation: fadeInDown 2s ease;
+    }
+    @keyframes fadeInDown {
+      0% {opacity: 0; transform: translateY(-50px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+    p {
+      font-size: 20px;
+      margin-bottom: 40px;
+      animation: fadeInUp 2.5s ease;
+    }
+    @keyframes fadeInUp {
+      0% {opacity: 0; transform: translateY(50px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+    .heart {
+      font-size: 90px;
+      animation: heartbeat 1.2s infinite, glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      25% { transform: scale(1.2); }
+      50% { transform: scale(1.4); }
+      75% { transform: scale(1.2); }
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff80ab, 0 0 20px #ff4081, 0 0 30px #f50057; }
+      to { text-shadow: 0 0 20px #f50057, 0 0 30px #d81b60, 0 0 40px #880e4f; }
+    }
+    .enter-btn {
+      padding: 14px 34px;
+      font-size: 18px;
+      background: linear-gradient(45deg, #ff4081, #ff80ab);
+      border: none;
+      border-radius: 40px;
+      color: white;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      animation: fadeInUp 3s ease;
+    }
+    .enter-btn:hover {
+      background: linear-gradient(45deg, #d81b60, #f50057);
+      transform: scale(1.1) rotate(-1deg);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Rohan ❤ Monalisha</h1>
+  <div class="heart">💖</div>
+  <p>A special place made just for us</p>
+  <button class="enter-btn" onclick="window.location.href='rmbackend.html'">Enter Our World</button>
+</body>
+</html>

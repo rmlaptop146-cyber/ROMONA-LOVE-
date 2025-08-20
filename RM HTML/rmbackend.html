@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>R&M Love Panel</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #ffe6eb, #fff9f9);
+      display: flex;
+      min-height: 100vh;
+      color: #444;
+    }
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      background: linear-gradient(180deg, #ff4b6e, #ff7ca8);
+      color: white;
+      padding: 25px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      border-radius: 0 25px 25px 0;
+      box-shadow: 2px 0 25px rgba(255, 75, 110, 0.3);
+    }
+    .sidebar h2 {
+      text-align: center;
+      font-size: 22px;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+    .sidebar a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      padding: 12px 15px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.1);
+      transition: 0.3s;
+      display: block;
+    }
+    .sidebar a:hover {
+      background: rgba(255,255,255,0.25);
+      transform: scale(1.05);
+    }
+    /* Main */
+    .main {
+      flex: 1;
+      padding: 30px;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+    .header h1 {
+      font-size: 26px;
+      color: #ff2d55;
+    }
+    .header .love {
+      font-size: 26px;
+      color: #ff2d55;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
+    /* Cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(255, 0, 85, 0.15);
+      transition: 0.3s;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .card::before {
+      content: "❤";
+      font-size: 80px;
+      position: absolute;
+      top: -20px;
+      right: -10px;
+      color: rgba(255, 45, 85, 0.1);
+    }
+    .card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 12px 28px rgba(255, 0, 85, 0.25);
+    }
+    .card h3 {
+      margin-bottom: 10px;
+      color: #ff2d55;
+    }
+    .card p {
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>💞 R&M 💞</h2>
+    <a href="#">🏠 Dashboard</a>
+    <a href="#">💌 Love Notes</a>
+    <a href="rmmemories.html">📸 Memories</a>
+    <a href="#">✨ First Meet</a>
+    <a href="#">🎶 Songs</a>
+    <a href="#">🌹 Future Plans</a>
+  </div>
+
+  <!-- Main -->
+  <div class="main">
+    <div class="header">
+      <h1>Welcome My Love, Monalisha 💖</h1>
+      <div class="love">💘</div>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h3>💌 Love Notes</h3>
+        <p>Write secret messages only we can see.</p>
+      </div>
+      <div class="card" onclick="location.href='rmmemories.html'">
+        <h3>📸 Memories</h3>
+        <p>Store our cutest selfies & special days.</p>
+      </div>
+      <div class="card">
+        <h3>✨ First Meet</h3>
+        <p>Keep photos & memories from the day we first met.</p>
+      </div>
+      <div class="card">
+        <h3>🎶 Songs</h3>
+        <p>Our playlist of songs that remind us of each other.</p>
+      </div>
+      <div class="card">
+        <h3>🌹 Future Plans</h3>
+        <p>Keep our dreams, trips & forever promises here.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
